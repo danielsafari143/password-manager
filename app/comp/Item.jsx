@@ -17,7 +17,7 @@ export default Item = ({ item }) => {
         <ListItem.Swipeable
             className="h-20  bg-white rounded-lg shadow shadow-indigo-500/50 w-fit px-3  my-2 hover:bg-gray-800"
             rightContent={(reset) => <DeleteButton reset = {reset}/>}
-            onPress={() => dispatch(passModal(true))}
+            onPress={() => dispatch(passModal({ste:true , id: item.key}))}
         >
             <ListItem.Content className="flex flex-row justify-between items-center">
                     <View className="flex flex-row gap-2 justify-between items-center">

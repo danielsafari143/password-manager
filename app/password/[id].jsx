@@ -11,12 +11,10 @@ export default Index = () => {
     const passwords = useSelector(state => state.Add.passwords);
     const local = useLocalSearchParams();
 
-    console.log(local.icon);
-
     return (
         load ? <SafeAreaView >
             <View className="absolute w-full h-[450px]">
-            <PassModal />
+            <PassModal icon={local.icon} />
             </View>
             <View className="absolute mx-5 left-0 top-5 h-auto">
             <View >

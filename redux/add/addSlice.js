@@ -6,9 +6,10 @@ import dribble from '../../assets/images/Iconly/Light-Outline/dribble.png';
 const initialState = {
     modalOpened: false,
     passwordModal : false,
-    passwords : [{ title: 'Instagram', number: 3, body: 'safari@gamil.com', key: 'item7', icon: instagram, favorite: false }
-    , { title: 'Dribble', number: 3, body: 'safari@gmail.com', key: 'item6', icon: dribble, favorite: true }
-    , { title: 'Facebook', number: 3, body: 'safari@gamil.com', key: 'item5', icon: facebook, favorite: false }]
+    passwordId: "item7",
+    passwords : [{ title: 'Instagram',password:"daniel3", number: 3, body: 'safari@gamil.com', key: 'item7', icon: instagram, favorite: false }
+    , { title: 'Dribble', number: 3,password:"rodrigue", body: 'safari@gmail.com', key: 'item6', icon: dribble, favorite: true }
+    , { title: 'Facebook', number: 3, password:"loprada45", body: 'safari@gamil.com', key: 'item5', icon: facebook, favorite: false }]
 }
 
 const addSlice = createSlice({
@@ -19,7 +20,8 @@ const addSlice = createSlice({
             state.modalOpened = action.payload;
         },
         passModal(state , action) {
-            state.passwordModal = action.payload;
+            state.passwordId = action.payload.id
+            state.passwordModal = action.payload.ste;
         }
     }
 })
